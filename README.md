@@ -8,8 +8,6 @@ New UIX options will be found in `Create New > Object > Neos UIX`<br>
 <br>
 ![image](https://user-images.githubusercontent.com/7883807/227723891-2a48839b-f0d8-4749-bccc-a684c36f6189.png)
 
-
-
 ## Installation
 1. Install [NeosModLoader](https://github.com/neos-modding-group/NeosModLoader).
 1. Place [CreateNewUIX.dll](https://github.com/XDelta/CreateNewUIX/releases/latest/download/CreateNewUIX.dll) into your `nml_mods` folder. This folder should be at `C:\Program Files (x86)\Steam\steamapps\common\NeosVR\nml_mods` for a default install. You can create it if it's missing, or if you launch the game once with NeosModLoader installed it will create the folder for you.
