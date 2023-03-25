@@ -50,7 +50,7 @@ namespace CreateNewUIX {
         public static void CreateButton(Slot x) {
 			x.Name = "Button";
 			x.GlobalScale = defaultScale;
-            x.AttachComponent<Grabbable>();
+            x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(245, 45);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -62,7 +62,7 @@ namespace CreateNewUIX {
 		public static void CreateCheckBox(Slot x) {
 			x.Name = "Checkbox";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(45, 45);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -72,7 +72,7 @@ namespace CreateNewUIX {
 		public static void CreateExpander(Slot x) {
 			x.Name = "Expander";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(256, 256);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -90,7 +90,7 @@ namespace CreateNewUIX {
 		public static void CreateImage(Slot x) {
 			x.Name = "Image";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(256, 256);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -100,7 +100,7 @@ namespace CreateNewUIX {
 		public static void CreateNumericUpDownButtons(Slot x) {
 			x.Name = "Numeric UpDown";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			var _dataValue = x.AttachComponent<ValueField<float>>();
 			_canvas.Size.Value = new float2(245, 45);
@@ -129,7 +129,7 @@ namespace CreateNewUIX {
 		public static void CreatePanel(Slot x) {
 			x.Name = "Panel";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(1920, 1080);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -139,7 +139,7 @@ namespace CreateNewUIX {
 		public static void CreateScrollArea(Slot x) {
 			x.Name = "Scroll Area";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(512, 512);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -153,7 +153,7 @@ namespace CreateNewUIX {
 		public static void CreateSlider(Slot x) {
 			x.Name = "Slider";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(500, 64);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -164,7 +164,7 @@ namespace CreateNewUIX {
 		public static void CreateText(Slot x) {
 			x.Name = "Text";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(245, 45);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -176,7 +176,7 @@ namespace CreateNewUIX {
 		public static void CreateTextField(Slot x) {
 			x.Name = "Text Field";
 			x.GlobalScale = defaultScale;
-			x.AttachComponent<Grabbable>();
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(245, 45);
 			UIBuilder ui = new UIBuilder(_canvas);
