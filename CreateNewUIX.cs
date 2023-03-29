@@ -17,16 +17,16 @@ namespace CreateNewUIX {
 		}
 		private static readonly float3 defaultScale = new float3(0.001f, 0.001f, 0.001f);
         void AddMenuOptions() {
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Button", (x) => CreateButton(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Checkbox", (x) => CreateCheckBox(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Expander", (x) => CreateExpander(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Image", (x) => CreateImage(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Numeric UpDown", (x) => CreateNumericUpDownButtons(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Panel", (x) => CreatePanel(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Scroll Area", (x) => CreateScrollArea(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Slider", (x) => CreateSlider(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Text", (x) => CreateText(x));
-			DevCreateNewForm.AddAction("Object\\Neos UIX", "Text Field", (x) => CreateTextField(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Button", (x) => CreateButton(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Checkbox", (x) => CreateCheckBox(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Expander", (x) => CreateExpander(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Image", (x) => CreateImage(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Numeric UpDown", (x) => CreateNumericUpDownButtons(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Panel", (x) => CreatePanel(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Scroll Area", (x) => CreateScrollArea(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Slider", (x) => CreateSlider(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Text", (x) => CreateText(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Text Field", (x) => CreateTextField(x));
 		}
 
         /*
