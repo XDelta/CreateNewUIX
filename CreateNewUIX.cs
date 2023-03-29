@@ -113,17 +113,17 @@ namespace CreateNewUIX {
 			text.Color.Value = color.White;
 			//Decrement
 			var bvs = dec.Slot.AttachComponent<ButtonValueShift<float>>();
-			bvs.TargetValue.Value = _dataValue.Value.ReferenceID;
-			bvs.Delta.Value = -1f;
+			bvs.TargetValue.Target = _dataValue.Value;
+            bvs.Delta.Value = -1f;
 			//Increment
 			var bvs2 = inc.Slot.AttachComponent<ButtonValueShift<float>>();
-			bvs2.TargetValue.Value = _dataValue.Value.ReferenceID;
-			bvs2.Delta.Value = 1f;
+			bvs2.TargetValue.Target = _dataValue.Value;
+            bvs2.Delta.Value = 1f;
 			//Text Driver from value
 			var vtfd = text.Slot.AttachComponent<ValueTextFormatDriver<float>>();
-			vtfd.Text.Value = text.Content.ReferenceID;
+			vtfd.Text.Target = text.Content;
 			vtfd.Format.Value = "{0:f2}";
-			vtfd.Source.Value = _dataValue.Value.ReferenceID;
+			vtfd.Source.Target = _dataValue.Value;
 			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
 		}
 		public static void CreatePanel(Slot x) {
