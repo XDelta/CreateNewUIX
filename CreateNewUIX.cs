@@ -54,7 +54,7 @@ namespace CreateNewUIX {
 			x.GlobalScale = defaultScale;
             x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
-			_canvas.Size.Value = new float2(245, 45);
+			_canvas.Size.Value = new float2(256, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.Black, true);
 			ui.Button("Button");
@@ -66,7 +66,7 @@ namespace CreateNewUIX {
 			x.GlobalScale = defaultScale;
 			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
-			_canvas.Size.Value = new float2(45, 45);
+			_canvas.Size.Value = new float2(48, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Checkbox();
 			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
@@ -105,7 +105,7 @@ namespace CreateNewUIX {
 			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			var _dataValue = x.AttachComponent<ValueField<float>>();
-			_canvas.Size.Value = new float2(245, 45);
+			_canvas.Size.Value = new float2(256, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.Black, true);
 			ui.HorizontalLayout(5, 2);
@@ -190,7 +190,7 @@ namespace CreateNewUIX {
 			x.GlobalScale = defaultScale;
 			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
-			_canvas.Size.Value = new float2(500, 64);
+			_canvas.Size.Value = new float2(512, 64);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.Black, true);
 			ui.Slider(64f, 0.5f,0f, 1f, false);
@@ -201,7 +201,7 @@ namespace CreateNewUIX {
 			x.GlobalScale = defaultScale;
 			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
-			_canvas.Size.Value = new float2(245, 45);
+			_canvas.Size.Value = new float2(256, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.White, true);
 			var text = ui.Text("Text");
@@ -213,7 +213,7 @@ namespace CreateNewUIX {
 			x.GlobalScale = defaultScale;
 			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
-			_canvas.Size.Value = new float2(245, 45);
+			_canvas.Size.Value = new float2(256, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.Black, true);
 			ui.TextField("Text Field");
