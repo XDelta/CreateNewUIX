@@ -8,7 +8,7 @@ namespace CreateNewUIX {
 	public class CreateNewUIX : NeosMod {
 		public override string Name => "CreateNewUIX";
 		public override string Author => "Delta";
-		public override string Version => "1.0.0";
+		public override string Version => "1.1.0";
 		public override string Link => "https://github.com/XDelta/CreateNewUIX";
 		public override void OnEngineInit() {
 			/*Harmony harmony = new Harmony("net.deltawolf.CreateNewUIX");
@@ -16,7 +16,7 @@ namespace CreateNewUIX {
 			Engine.Current.RunPostInit(AddMenuOptions);
 		}
 		private static readonly float3 defaultScale = new float3(0.001f, 0.001f, 0.001f);
-        void AddMenuOptions() {
+		void AddMenuOptions() {
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Button", (x) => CreateButton(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Checkbox", (x) => CreateCheckBox(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Expander", (x) => CreateExpander(x));
@@ -31,7 +31,7 @@ namespace CreateNewUIX {
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Text Field", (x) => CreateTextField(x));
 		}
 
-        /*
+		/*
 			*Button
 			*Checkbox
 			Dropdown
@@ -42,17 +42,17 @@ namespace CreateNewUIX {
 			Numberic Choice Bar
 			/Numeric UpDown
 			*Panel
-			Progress Bar
-			Radio
+			*Progress Bar
+			*Radio
 			*Slider
 			*Text Field
 			URL Field with button to open as link
 		*/
 
-        public static void CreateButton(Slot x) {
+		public static void CreateButton(Slot x) {
 			x.Name = "Button";
 			x.GlobalScale = defaultScale;
-            x.AttachComponent<Grabbable>().Scalable.Value = true;
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
 			var _canvas = x.AttachComponent<Canvas>();
 			_canvas.Size.Value = new float2(256, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
@@ -83,10 +83,10 @@ namespace CreateNewUIX {
 			ui.Button("Expander");
 			var ex = ui.Current.AttachComponent<Expander>();
 			ui.NestInto(r2);
-            ui.Panel(color.White, true);
-            var text = ui.Text("Some Text");
-            text.Color.Value = color.Black;
-            ex.SectionRoot.Target = r2.Slot;
+			ui.Panel(color.White, true);
+			var text = ui.Text("Some Text");
+			text.Color.Value = color.Black;
+			ex.SectionRoot.Target = r2.Slot;
 			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
 		}
 		public static void CreateImage(Slot x) {
@@ -117,11 +117,11 @@ namespace CreateNewUIX {
 			//Decrement
 			var bvs = dec.Slot.AttachComponent<ButtonValueShift<float>>();
 			bvs.TargetValue.Target = _dataValue.Value;
-            bvs.Delta.Value = -1f;
+			bvs.Delta.Value = -1f;
 			//Increment
 			var bvs2 = inc.Slot.AttachComponent<ButtonValueShift<float>>();
 			bvs2.TargetValue.Target = _dataValue.Value;
-            bvs2.Delta.Value = 1f;
+			bvs2.Delta.Value = 1f;
 			//Text Driver from value
 			var vtfd = text.Slot.AttachComponent<ValueTextFormatDriver<float>>();
 			vtfd.Text.Target = text.Content;
