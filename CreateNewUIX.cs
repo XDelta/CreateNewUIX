@@ -23,6 +23,8 @@ namespace CreateNewUIX {
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Image", (x) => CreateImage(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Numeric UpDown", (x) => CreateNumericUpDownButtons(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Panel", (x) => CreatePanel(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Progress Bar", (x) => CreateProgressBar(x));
+			DevCreateNewForm.AddAction("Object/Neos UIX", "Radio", (x) => CreateRadio(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Scroll Area", (x) => CreateScrollArea(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Slider", (x) => CreateSlider(x));
 			DevCreateNewForm.AddAction("Object/Neos UIX", "Text", (x) => CreateText(x));
@@ -134,6 +136,39 @@ namespace CreateNewUIX {
 			_canvas.Size.Value = new float2(1920, 1080);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.Black, true);
+			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
+		}
+		public static void CreateProgressBar(Slot x) {
+			x.Name = "ProgressBar";
+			x.GlobalScale = defaultScale;
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
+			var _canvas = x.AttachComponent<Canvas>();
+			_canvas.Size.Value = new float2(512, 64);
+			UIBuilder ui = new UIBuilder(_canvas);
+			ui.Panel(color.Black, true);
+			Image image = ui.Image(color.White, false);
+			ProgressBar progressBar = image.Slot.AttachComponent<ProgressBar>(true, null);
+			progressBar.SetTarget(image.RectTransform);
+			progressBar.Progress.Value = 0.69f; //Start with a value to show the progress bar 
+			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
+		}
+		public static void CreateRadio(Slot x) {
+			x.Name = "Radio";
+			x.GlobalScale = defaultScale;
+			x.AttachComponent<Grabbable>().Scalable.Value = true;
+			var _canvas = x.AttachComponent<Canvas>();
+			var _dataValue = x.AttachComponent<ValueField<int>>();
+			_canvas.Size.Value = new float2(256, 208);
+			UIBuilder ui = new UIBuilder(_canvas);
+			ui.Panel(color.Black, true);
+			RadiantUI_Constants.SetupDefaultStyle(ui, false);
+			ui.VerticalLayout(4f, 0f, null);
+			ui.FitContent(SizeFit.Disabled, SizeFit.PreferredSize);
+			ui.Style.MinHeight = 48f;
+			ui.Style.PreferredHeight = 48f;
+			for (int i = 0; i < 4; i++) {
+				ui.ValueRadio<int>("Button "+ i,_dataValue.Value, i);
+			}
 			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
 		}
 		public static void CreateScrollArea(Slot x) {
