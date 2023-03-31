@@ -216,7 +216,10 @@ namespace CreateNewUIX {
 			_canvas.Size.Value = new float2(256, 48);
 			UIBuilder ui = new UIBuilder(_canvas);
 			ui.Panel(color.Black, true);
-			ui.TextField("Text Field");
+			TextField text = ui.TextField(null);
+			text.Text.NullContent.Value = "<i>Text Field</i>";
+			text.Editor.Target.FinishHandling.Value = TextEditor.FinishAction.NullOnWhitespace;
+			ui.CurrentRect.AddFixedPadding(6);
 			x.PositionInFrontOfUser(float3.Backward, distance: 1f);
 		}
 	}
