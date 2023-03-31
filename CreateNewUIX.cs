@@ -113,6 +113,7 @@ namespace CreateNewUIX {
 			var text = ui.Text("0.00");
 			var inc = ui.Button("+");
 			text.Color.Value = color.White;
+			text.Slot.GetComponent<LayoutElement>().PreferredWidth.Value = 108;
 			//Decrement
 			var bvs = dec.Slot.AttachComponent<ButtonValueShift<float>>();
 			bvs.TargetValue.Target = _dataValue.Value;
